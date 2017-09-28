@@ -400,7 +400,7 @@ sub fine_map_gwas {
 	
 	`$bin_dir/openmp_wrapper -d $out_dir/batch_dap.cmd -t 8`;
     }else{
-	`sh $ou_dir/batch_dap.cmd`;
+	`sh $out_dir/batch_dap.cmd`;
     }
 
 }
@@ -420,7 +420,7 @@ sub compute_rcp {
     close OUT;
     
     if($use_openmp){
-	`openmp_wrapper -d $out_dir/batch_rcp.cmd -t 8`;
+	`$bin_dir/openmp_wrapper -d $out_dir/batch_rcp.cmd -t 8`;
     }else{
 	`sh $out_dir/batch_rcp.cmd`;
     }
